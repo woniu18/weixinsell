@@ -1,0 +1,42 @@
+spring:
+  redis:
+    host: 192.168.80.129
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.80.129:3306/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non-null
+server:
+  servlet:
+    context-path: /sell
+    
+#日志
+logging:
+  pattern:
+    console: "%d - %msg%n" #日志格式
+    level: debug
+#  path: F:/data/logs/ #日志路径
+  file: F:/data/logs/sell.log #日志保存文件
+  level: 
+#    sql: debug
+    com.weixin.sell.LogTest: debug
+#    root: debug
+  
+wechat:
+  mpAppId: wx0cccb4bc8c256358
+  mpAppSecret: 27850ae56bf328c99e2af1203586b067
+  openAppId: 
+  openAppSecret: 
+  templateId: 
+    orderSattus: vtuFip4W5NnWtLWWmo4mZd-mY4x_zFwFmznnWrxpVtU
+
+projecturl: 
+  wechatMpAuthorize:  http://mall.nat100.top
+  wechatOpenAuthorize:  http://mall.nat100.top
+  sell: http://127.0.0.1:8080
+  
